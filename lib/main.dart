@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 	void response(query) async {
 		AuthGoogle authGoogle = await AuthGoogle(
-				fileJson: "assets/singular-range-341918-982e61a2a257.json"
+				fileJson: "assets/dialogflow-chat.json"
 				) .build() ;
 		Dialogflow dialogflow = Dialogflow( authGoogle: authGoogle, language: Language.english);
 		AIResponse aiResponse = await dialogflow.detectIntent(query);
@@ -58,7 +58,9 @@ class _MyHomePageState extends State<MyHomePage> {
 	Widget build(BuildContext context) {
 		return Scaffold(
 			appBar: AppBar(
-				title: Text ("Chat Bot UI header"),
+				title: Center 
+					(child: Text ("Melano")
+				),
 			),
 
 			body: Container ( 
@@ -83,10 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 					Container(
 						child: ListTile (
-							leading: IconButton ( 
-								icon: const Icon(Icons.camera_alt),
-								iconSize: 35.0, onPressed: () {  } ,
-							),
+
 							title: Container (
 								height: 35,
 								decoration:  BoxDecoration (
@@ -120,7 +119,12 @@ class _MyHomePageState extends State<MyHomePage> {
 									),
 								),
 
+							// 	leading: IconButton ( 
+								
+							// ),
+
 								trailing: IconButton (
+									
 									
 									icon:  Icon(
 										Icons.send,
@@ -159,20 +163,20 @@ class _MyHomePageState extends State<MyHomePage> {
 
 	Widget chat (String message, int data) {
 		return Container(
-			padding: EdgeInsets.only(left: 20, right: 20),
+			padding: EdgeInsets.only(left: 10, right: 10),
 
 			child: Row(
 				mainAxisAlignment: data == 1 ? MainAxisAlignment.end : MainAxisAlignment.start,
 				children: [
 					data == 0 ? Container(
-						height: 60.0,
-						width: 60.0,
+						height: 50.0,
+						width: 50.0,
 						child: CircleAvatar (
-							backgroundImage: AssetImage ("assets/robot.jpg"),
+							backgroundImage: AssetImage ("assets/Logo-draft-clear-2.png"),
 						),
 					) : Container(),
 
-					Padding(
+					Padding (
 						padding: EdgeInsets.all(5.0),
 						child: Bubble (
 							radius: Radius.circular(5.0),
@@ -205,11 +209,11 @@ class _MyHomePageState extends State<MyHomePage> {
 					),
 
 					data == 1 ? Container (
-						height: 60.0,
-						width: 60.0,
-						child: CircleAvatar (
-							backgroundImage: AssetImage("assets/default.jpg"),
-							),
+						// height: 60.0,
+						// width: 60.0,
+						// child: CircleAvatar (
+						// 	backgroundImage: AssetImage("assets/default.jpg"),
+						// 	),
 					) : Container() ,
 
 				],

@@ -62,8 +62,8 @@ flutter:
     - assets/robot.jpg
     - assets/camera.png
     - assets/default.jpg
-    - assets/singular-range-341918-371ea162b71b.json
-    - assets/singular-range-341918-982e61a2a257.json
+    - assets/Logo-draft-clear-2.png
+    - assets/dialogflow-chat.json
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
