@@ -125,7 +125,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
 								trailing: IconButton (
 									
-									
 									icon:  Icon(
 										Icons.send,
 										size: 30.0,
